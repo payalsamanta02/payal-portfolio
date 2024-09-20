@@ -1,950 +1,473 @@
-<!doctype html>
-<html class="no-js" lang="en">
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<!-- meta data -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
 
 
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ============ link Bootstrap ============== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- ============ link Styling ============== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* Contact Form Styling */
+        .contact-form {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-	<!--font-family-->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-	<!-- title of site -->
-	<title>projects - 1 </title>
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
 
-	<!-- For favicon png -->
-	<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png" />
+        .contact-form input[type="submit"] {
+            background: #007bff;
+            border: none;
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
 
-	<!--font-awesome.min.css-->
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        .contact-form input[type="submit"]:hover {
+            background: #0056b3;
+        }
 
-	<!--flat icon css-->
-	<link rel="stylesheet" href="assets/css/flaticon.css">
+        .contact-form textarea {
+            resize: none;
+        }
 
-	<!--animate.css-->
-	<link rel="stylesheet" href="assets/css/animate.css">
+        .contact h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
 
-	<!--owl.carousel.css-->
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        .contact-details {
+            margin-top: 40px;
+        }
 
-	<!--bootstrap.min.css-->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        .contact-details p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
 
-	<!-- bootsnav -->
-	<link rel="stylesheet" href="assets/css/bootsnav.css">
+        @media (max-width: 768px) {
+            .contact h1 {
+                font-size: 2rem;
+            }
 
-	<!--style.css-->
-	<link rel="stylesheet" href="assets/css/style.css">
+            .contact-form {
+                padding: 20px;
+            }
 
-	<!--responsive.css-->
-	<link rel="stylesheet" href="assets/css/responsive.css">
+            .contact-form input,
+            .contact-form textarea {
+                padding: 10px;
+            }
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	
-	
+            .contact-details {
+                margin-top: 20px;
+            }
 
+            .contact-details p {
+                font-size: 1rem;
+            }
+        }
+
+        
+
+        
+        }
+    </style>
+    
+
+
+
+    <!-- Custom Styles for Experience Section -->
+<style>
+.experience .experience-time {
+    margin-bottom: 20px;
+}
+.experience .experience-time h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.experience .experience-time h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.experience .timeline-icon {
+    font-size: 16px;
+    color: #f39c12;
+}
+.experience .timeline-content h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.experience .timeline-content h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.experience .timeline-content p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.experience .single-timeline-box {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.experience .single-timeline-box:last-child {
+    border-bottom: none;
+}
+@media (max-width: 767px) {
+    .experience .experience-time {
+        text-align: center;
+    }
+    .experience .timeline-content {
+        text-align: center;
+    }
+}
+</style>
+
+
+    <title>My Portfolio</title>
 </head>
 
 <body>
-	<!--[if lte IE 9]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-	<![endif]-->
-	<!-- top-area Start -->
-	<header class="top-area">
-		<div class="header-area">
-			<!-- Start Navigation -->
-			<nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+    <!--====================== header ============== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand bold logo" href="#">Data Analyst Profile</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-				<div class="container">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--====================== homepage ============== -->
+        <section class="hero-section bg-section" id="home">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-lg-5 mt-5 animate__animated animate__zoomIn animate__delay-1s">
+                        <img src="assets/images/name.png" alt="Profile Image">
+                    </div>
+                    <div class="col-lg-7 mt-lg-0 mt-5 mb-lg-0 mb-5 animate__animated animate__lightSpeedInLeft animate__delay-1s">
+                        <p class="hero-para">Hello I'm</p>
+                        <h1 class="hero-head">Payal Samanta</h1>
+                        <p class="hero-para">Professional <span class="hero-span">Data Analyst</span></p>
+                        <p class="mt-4 hero-para">I am Payal Samanta, currently pursuing an MS in Business Analytics and Information Systems at the University of South Florida. With a strong GPA of 4.0 in my master's program, I bring 1 year of experience in the IT field, specializing in Python programming, SQL database management, and advanced data analytics. My experience includes hands-on projects in big data technologies like Apache Spark and AWS RedShift, as well as proficiency in cloud platforms such as Microsoft Azure and AWS. 
+                        Dynamic developer skilled in automated testing, data analysis, and agile integration, leveraging expertise in Selenium, Python, SQL, and Tableau to deliver impactful solutions and drive product excellence.</p>
+                        
+                        <div class="icon d-flex align-items-center">
+                            <a href="https://www.linkedin.com/in/payal-samanta-29b444202/"><i class='bx bxl-linkedin'></i></a>
+                            <a href="https://github.com/payalsamanta02"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.instagram.com/payalsamanta22?igsh=MXA5bzVlZHowamtydQ%3D%3D&utm_source=qr"><i class='bx bxl-instagram'></i></a>
+                        </div>
 
-					<!-- Start Header Navigation -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-							<i class="fa fa-bars"></i>
-						</button>
-						<a class="navbar-brand" href="index.html">Payal Samanta</a>
-					</div><!--/.navbar-header-->
-					<!-- End Header Navigation -->
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-						<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-							<li class=" smooth-menu active"></li>
-							<li class=" smooth-menu"><a href="#education">education</a></li>
-							<li class="smooth-menu"><a href="#skills">skills</a></li>
-							<li class="smooth-menu"><a href="#experience">experience</a></li>
-
-							<li class="smooth-menu"><a href="#projects">projects</a></li>
-
-							<li class="smooth-menu"><a href="#contact">contact</a></li>
-						</ul><!--/.nav -->
-					</div><!-- /.navbar-collapse -->
-				</div><!--/.container-->
-			</nav><!--/nav-->
-			<!-- End Navigation -->
-		</div><!--/.header-area-->
-
-		<div class="clearfix"></div>
-
-	</header><!-- /.top-area-->
-	<!-- top-area End -->
-	<!--welcome-hero start -->
-	<section id="welcome-hero" class="welcome-hero">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<div class="header-text">
-						<h2>hi <span>,</span> i am <br>Payal<br> Samanta <span>.</span>   </h2>
-						<p>Professional Data Analyst</p>
-						<a href="assets/download/resume.pdf" download>download resume</a>
-					</div><!--/.header-text-->
-				</div><!--/.col-->
-			</div><!-- /.row-->
-		</div><!-- /.container-->
-
-	</section><!--/.welcome-hero-->
-	<!--welcome-hero end -->
-	<!--about start -->
-	<section id="about" class="about">
-		<div class="section-heading text-center">
-			<h2>about me</h2>
-		</div>
-		<div class="container">
-			<div class="about-content">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="single-about-txt">
-							<h3>
-								I am Payal Samanta, currently pursuing an MS in Business Analytics and Information Systems at the University of South Florida.
-							</h3>
-							<p>
-								With a strong GPA of 4.0 in my master's program, I bring 1 year of experience in the IT field, specializing in Python programming, SQL database management, and advanced data analytics. My experience includes hands-on projects in big data technologies like Apache Spark and AWS RedShift, as well as proficiency in cloud platforms such as Microsoft Azure and AWS. Dynamic developer skilled in automated testing, data analysis, and agile integration, leveraging expertise in Selenium, Python, SQL, and Tableau to deliver impactful solutions and drive product excellence.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====================== homepage end ============== -->
 
 
-							</p>
+
+<!--experience start -->
+<section id="experience" class="experience">
+	<div class="row">
+    <div class="col-12 text-center animate__animated animate__zoomInUp">
+        <h1 class="hero-head">Experience</h1>
+        <p class="font-weight-bold">Timeline</p>
+        <div class="heading-line"></div>
+    </div>
+</div>
+	<div class="container">
+		<div class="experience-content">
+			<div class="main-timeline">
+				<ul>
+					<li>
+						<div class="single-timeline-box fix">
 							<div class="row">
-								<div class="col-sm-4">
-									<div class="single-about-add-info">
-										<h3>phone</h3>
-										<p>656-216-7950</p>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="single-about-add-info">
-										<h3>email</h3>
-										<p>payalsamanta02@gmail.com</p>
-									</div>
-								</div>
-
+								<div class="col-md-5">
+									<div class="experience-time text-right">
+										<h2>Feb 2022 - July 2023</h2>
+										<h3>Associate Developer</h3>
+									</div><!--/.experience-time-->
+								</div><!--/.col-->
+								<div class="col-md-offset-1 col-md-5">
+									<div class="timeline">
+										<div class="timeline-content">
+											<h4 class="title">
+												<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+												Commvault
+											</h4>
+											<h5>Remote</h5>
+											<p class="description">
+												- Worked on Automated Testing, developed and executed comprehensive web automation test cases using Selenium with Python, ensuring robust test coverage for critical user scenarios.<br>
+												- Contributed to sprint planning by creating user stories and automation scenarios, aligning testing efforts with agile development cycles (Agile Integration) for improved efficiency.<br>
+												- Documented test plans, test cases, Technical Support and automation scripts, contributing to a comprehensive knowledge base for future reference and team onboarding.<br>
+												- Actively participated in troubleshooting sessions, collaborating with developers and QA team members to resolve issues and improve overall product quality.
+											</p>
+										</div><!--/.timeline-content-->
+									</div><!--/.timeline-->
+								</div><!--/.col-->
 							</div>
-						</div>
-					</div>
-					<div class="col-sm-offset-1 col-sm-5">
-						<div class="single-about-img">
-							<img src="assets/images/about/profile_image.jpeg" alt="profile_image">
-							<div class="about-list-icon">
-								<ul>
-									<li>
-										<a href="#">
-											<i class="fa fa-facebook" aria-hidden="true"></i>
-										</a>
-									</li><!-- / li -->
-									<li>
-										<a href="#">
-											<i class="fa fa-dribbble" aria-hidden="true"></i>
-										</a>
-
-									</li><!-- / li -->
-									<li>
-										<a href="#">
-											<i class="fa fa-twitter" aria-hidden="true"></i>
-										</a>
-
-									</li><!-- / li -->
-									<li>
-										<a href="#">
-											<i class="fa fa-linkedin" aria-hidden="true"></i>
-										</a>
-									</li><!-- / li -->
-									<li>
-										<a href="#">
-											<i class="fa fa-instagram" aria-hidden="true"></i>
-										</a>
-									</li><!-- / li -->
-
-
-								</ul><!-- / ul -->
-							</div><!-- /.about-list-icon -->
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!--/.about-->
-	<!--about end -->
-	<!--education start -->
-	<section id="education" class="education">
-		<div class="section-heading text-center">
-			<h2>Education</h2>
-		</div>
-		<div class="container">
-			<div class="education-horizontal-timeline">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="single-horizontal-timeline">
-							<div class="experience-time">
-								<h2>Aug 2023 - Dec 2024</h2>
-								<h3>MS in <span>Business Analytics and Information Systems</span></h3>
-							</div><!--/.experience-time-->
-							<div class="timeline-horizontal-border">
-								<i class="fa fa-circle" aria-hidden="true"></i>
-								<span class="single-timeline-horizontal"></span>
+						</div><!--/.single-timeline-box-->
+					</li>
+					<li>
+						<div class="single-timeline-box fix">
+							<div class="row">
+								<div class="col-md-5">
+									<div class="experience-time text-right">
+										<h2>June 2021 - August 2022</h2>
+										<h3>Technical Developer - Freelancer</h3>
+									</div><!--/.experience-time-->
+								</div><!--/.col-->
+								<div class="col-md-offset-1 col-md-5">
+									<div class="timeline">
+										<div class="timeline-content">
+											<h4 class="title">
+												<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+												JavaTPoint
+											</h4>
+											<h5>India</h5>
+											<p class="description">
+												- Conducted a thorough analysis of customer purchasing behaviors using SQL queries, content research, and Microsoft Excel, identifying key trends for revenue growth.<br>
+												- Leveraged JIRA's flexibility to design customized Scrum and Kanban dashboards, empowering teams to efficiently manage tasks, prioritize work, and achieve project objectives with clarity and precision.<br>
+												- Collaborated with cross-functional teams to develop Tableau dashboards, translating data-driven insights into actionable strategies for online course clients, ultimately increasing company profitability.<br>
+												- Conducted sessions with stakeholders to gather requirements and perform business analysis tasks.<br>
+												- Led a team of 10 members in conducting content research and delivering technical articles. Demonstrated strong communication and people skills to effectively coordinate efforts, resolve conflicts, and ensure timely completion of work.
+											</p>
+										</div><!--/.timeline-content-->
+									</div><!--/.timeline-->
+								</div><!--/.col-->
 							</div>
-							<div class="timeline">
-								<div class="timeline-content">
-									<h4 class="title">
-										University of South Florida
-									</h4>
-									<h5>Tampa, FL</h5>
-									<p class="description">
-										GPA - 4.0,<br>
-										Relevant Coursework: Data Mining (Python), Advanced Database Management (SQL), Analytical Methods for Business (R), Data Science Programming, Distributed Information Systems, Big Data Technology, Software Development Life Cycle, Cloud Computing
-
-									</p>
-								</div><!--/.timeline-content-->
-							</div><!--/.timeline-->
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="single-horizontal-timeline">
-							<div class="experience-time">
-								<h2>Jul 2018 - Jun 2022</h2>
-								<h3>B.Tech in <span>Computer Science Engineering</span></h3>
-							</div><!--/.experience-time-->
-							<div class="timeline-horizontal-border">
-								<i class="fa fa-circle" aria-hidden="true"></i>
-								<span class="single-timeline-horizontal"></span>
-							</div>
-							<div class="timeline">
-								<div class="timeline-content">
-									<h4 class="title">
-										Malla Reddy Engineering College
-									</h4>
-									<h5>Hyderabad, India</h5>
-									<p class="description">
-										GPA - 3.9<br>
-										Relevant Coursework: Cloud computing, Software Development lifecycle, Object-Oriented Programming, Operating Systems, Software Testing, FORMAL LANGUAGES AND AUTOMATAFORMAL LANGUAGES AND AUTOMATA THEORY, Web Technologies.
-									</p>
-								</div><!--/.timeline-content-->
-							</div><!--/.timeline-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!--/.education-->
-	<!--education end -->
-	<!-- skills start -->
-	<section id="skills" class="skills">
-		<div class="skill-content">
-			<div class="section-heading text-center">
-				<h2>Skills</h2>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="single-skill-content">
-							<div class="barWrapper">
-								<span class="progressText">Python</span>
-								<div class="single-progress-txt">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>90%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">SQL</span>
-								<div class="single-progress-txt">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>85%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Data visualization</span>
-								<div class="single-progress-txt">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>97%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Big data</span>
-								<div class="single-progress-txt">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>90%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="single-skill-content">
-							<div class="barWrapper">
-								<span class="progressText">Database Management Systems</span>
-								<div class="single-progress-txt">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>90%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Data science</span>
-								<div class="single-progress-txt">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>85%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Data Mining</span>
-								<div class="single-progress-txt">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>97%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Dashboards and reports</span>
-								<div class="single-progress-txt">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>90%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-						</div>
-					</div>
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.skill-content-->
-	</section><!--/.skills-->
-	<!-- skills end -->
-	<!-- Experience Start -->
-	<section id="experience" class="experience">
-		<div class="section-heading text-center">
-			<h2>Experience</h2>
-		</div>
-		<div class="container">
-			<div class="experience-content">
-				<div class="main-timeline">
-					<ul>
-						<li>
-							<div class="single-timeline-box fix">
-								<div class="row">
-									<div class="col-md-5">
-										<div class="experience-time text-right">
-											<h2>Jun 2021 – Present</h2>
-											<h3>Technical Developer – Part Time</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-									<div class="col-md-offset-1 col-md-5">
-										<div class="timeline">
-											<div class="timeline-content">
-												<h4 class="title">
-													<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-													Javatpoint
-												</h4>
-												<h5>Remote</h5>
-												<p class="description">
-													• Created customer-facing reports, including Executive Business Reviews, to demonstrate Javatpoint’s value and foster client relationships, resulting in a 20% increase in client satisfaction. Conducted stakeholder sessions with over 50 participants to gather requirements.<br>
-													• Developed reports and dashboards on a by-request basis using Power BI, MS Excel, and Canvas, resulting in a 15% improvement in data accessibility.<br>
-													• Interpreted and analyzed data from multiple sources (course sales, feedback, marketing metrics) using stored procedures and complex SQL queries and optimized performance that led to a notable 10% increase in customer retention rates, resulting in an estimated millions in additional revenue.<br>
-												</p>
-											</div><!--/.timeline-content-->
-										</div><!--/.timeline-->
-									</div><!--/.col-->
-								</div>
-							</div><!--/.single-timeline-box-->
-						</li>
-						<li>
-							<div class="single-timeline-box fix">
-								<div class="row">
-									<div class="col-md-5 experience-time-responsive">
-										<div class="experience-time text-right">
-											<h2>Feb 2022 – Jul 2022</h2>
-											<h3>Associate Developer (Test Engineer)</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-									<div class="col-md-offset-1 col-md-5">
-										<div class="timeline">
-											<div class="timeline-content">
-												<h4 class="title">
-													<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-													Commvault
-												</h4>
-												<h5>Bangalore, Karnataka</h5>
-												<p class="description">
-													• Developed automated scripts and test cases using Selenium with Python to ensure comprehensive test coverage for user scenarios, reducing manual workload by 20%, saving an estimated 80 man-hours per quarter.<br>
-													• Contributed to sprint planning by creating user stories and automation scenarios, aligning testing efforts with agile development cycles to enhance efficiency.<br>
-													• Resolved 85% of reported issues through active troubleshooting sessions with developers and QA team members, significantly improving overall product.<br>
-												</p>
-											</div><!--/.timeline-content-->
-										</div><!--/.timeline-->
-									</div><!--/.col-->
-								</div>
-							</div><!--/.single-timeline-box-->
-						</li>
-						<li>
-							<div class="single-timeline-box fix">
-								<div class="row">
-									<div class="col-md-5 experience-time-responsive">
-										<div class="experience-time text-right">
-											<h2>Feb 2022 – Jul 2022</h2>
-											<h3>Associate Developer (Data Analyst)</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-									<div class="col-md-offset-1 col-md-5">
-										<div class="timeline">
-											<div class="timeline-content">
-												<h4 class="title">
-													<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-													Commvault
-												</h4>
-												<h5>Bangalore, Karnataka</h5>
-												<p class="description">
-													• Led end-to-end data analysis using AWS Redshift and S3, optimizing data upload and processing for real-time insights.<br>
-													• Designed and executed efficient ETL pipelines, applying advanced analytical models to extract actionable patterns, enhancing decision-making by 30%.<br>
-													• Utilized SQL for querying and solving business problems, leveraging Redshift's inbuilt dashboard for impactful data visualization and insights.<br>
-												</p>
-											</div><!--/.timeline-content-->
-										</div><!--/.timeline-->
-									</div><!--/.col-->
-								</div>
-							</div><!--/.single-timeline-box-->
-						</li>
-						<li>
-							<div class="single-timeline-box fix">
-								<div class="row">
-									<div class="col-md-5">
-										<div class="experience-time text-right">
-											<h2>Jan 2023 – Mar 2023</h2>
-											<h3>Data Science Intern</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-									<div class="col-md-offset-1 col-md-5">
-										<div class="timeline">
-											<div class="timeline-content">
-												<h4 class="title">
-													<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-													Exposys Data Labs
-												</h4>
-												<h5>Hyderabad, India</h5>
-												<p class="description">
-													• Utilized Python (pandas, NumPy) for data extraction, cleaning, and analysis of FDIC data on failed US banks, improving data accuracy by 30%.<br>
-													• Implemented machine learning models (logistic regression, random forests) and feature engineering, enhancing predictive accuracy by 25%.<br>
-													• Employed Matplotlib and Seaborn for data visualization, effectively communicating insights and facilitating decision-making.<br>
-												</p>
-											</div><!--/.timeline-content-->
-										</div><!--/.timeline-->
-									</div><!--/.col-->
-								</div>
-							</div><!--/.single-timeline-box-->
-						</li>
-						<li>
-							<div class="single-timeline-box fix">
-								<div class="row">
-									<div class="col-md-5">
-										<div class="experience-time text-right">
-											<h2>Jun 2019 – Aug 2019</h2>
-											<h3>Web Development Intern</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-									<div class="col-md-offset-1 col-md-5">
-										<div class="timeline">
-											<div class="timeline-content">
-												<h4 class="title">
-													<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-													VVV Info Tech
-												</h4>
-												<h5>Remote</h5>
-												<p class="description">
-													• Architected robust MVC framework tailored to Broadband Company's specific needs, and deployed over Azure for 99.9% uptime and reliability.<br>
-													• Integrated Razor Components, JavaScript, Http File, Style Sheets, and designed the data model using UML in MS Visio, enhancing system clarity.<br>
-													• Showcased customer analytics visualizations using Synapse, analyzing over 1TB of data providing actionable insights for data driven actions.<br>
-												</p>
-											</div><!--/.timeline-content-->
-										</div><!--/.timeline-->
-									</div><!--/.col-->
-								</div>
-							</div><!--/.single-timeline-box-->
-						</li>
-					</ul>
-				</div><!--/.main-timeline-->
-			</div><!--/.experience-content-->
-		</div>
-	</section><!--/.experience-->
-	<!-- Experience End -->
-	<!-- Projects Start -->
-	<section id="projects" class="projects">
-		<div class="projects-details">
-			<div class="section-heading text-center">
-				<h2>Projects</h2>
-			</div>
-			<div class="container">
-				<div class="projects-content">
-					<div class="isotope">
-						<div class="row">
-
-							<div class="col-sm-4">
-								<div class="item">
-									<a href="#project1" data-toggle="modal">
-										<img src="assets/images/projects/p1.jpeg" alt="projects image" />
-										<div class="isotope-overlay">
-											<span>Integrated OCR and Machine Learning Analysis</span>
-										</div><!-- /.isotope-overlay -->
-									</a>
-								</div><!-- /.item -->
-							</div><!-- /.col -->
-
-							<div class="col-sm-4">
-								<div class="item">
-									<a href="#project2" data-toggle="modal">
-										<img src="assets/images/projects/p2.jpeg" alt="projects image" />
-										<div class="isotope-overlay">
-											<span>Big Data Project on Olympics Data Analytics</span>
-										</div><!-- /.isotope-overlay -->
-									</a>
-								</div><!-- /.item -->
-							</div><!-- /.col -->
-
-							<div class="col-sm-4">
-								<div class="item">
-									<a href="#project3" data-toggle="modal">
-										<img src="assets/images/projects/p3.jpeg" alt="projects image" />
-										<div class="isotope-overlay">
-											<span>Flight Delay Prediction Using Spark ML</span>
-										</div><!-- /.isotope-overlay -->
-									</a>
-								</div><!-- /.item -->
-							</div><!-- /.col -->
-
-
-
-						</div><!-- /.row -->
-					</div><!--/.isotope-->
-				</div><!--/.projects-content-->
-			</div><!--/.container-->
-		</div><!--/.projects-details-->
-	</section><!--/.projects-->
-	<!-- Projects End -->
-	<!-- Modals for Projects -->
-	<div id="project1" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Integrated OCR And Machine Learning Analysis With ChatGPT API Interaction</h4>
-				</div>
-				<div class="modal-body">
-					<img src="assets/images/projects/p1.jpeg" alt="Project Image" class="img-responsive">
-					<p>This project involves extracting text from images using OCR and processing it for key information extraction, followed by machine learning analysis and interaction with the ChatGPT API for enhanced user insights.</p>
-					<p><strong>Skills:</strong> Python programming, OCR (Optical Character Recognition), machine learning (scikit-learn), API integration (OpenAI).</p>
-					<p>This project showcases automation of data extraction and analysis, which is valuable for businesses looking to streamline document processing and enhance decision-making with AI-driven insights.</p>
-					<a href="https://github.com/payalsamanta02/Integrated-OCR-and-Machine-Learning-Analysis-with-ChatGPT-API-Interaction" class="btn btn-primary" target="_blank">View Project</a>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
+						</div><!--/.single-timeline-box-->
+					</li>
+				</ul>
+			</div><!--.main-timeline-->
+		</div><!--.experience-content-->
 	</div>
-
-	<div id="project2" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Big Data Project on Olympics Data Analytics</h4>
-				</div>
-				<div class="modal-body">
-					<img src="assets/images/projects/p22.png" alt="Project Image" class="img-responsive">
-					<p>This project focuses on analyzing an Olympic dataset using various tools and technologies available on the Azure platform. It demonstrates visualization skills through data integration using Azure Data Factory, transforming data with Azure Databricks, and most importantly, reporting with Power BI.</p>
-					<p><strong>Skills Demonstrated:</strong> Large-scale data processing, ETL processes, feature engineering, SQL querying, data visualization, and reporting.</p>
-					<p><strong>Business Value:</strong> This project provides comprehensive insights into sports data, aiding stakeholders in making data-driven decisions, improving coaches' performance analysis, and enhancing the overall viewing experience for end users through detailed visualizations and reports.</p>
-					<a href="https://github.com/payalsamanta02/Azure-Data-Engineering-Project" class="btn btn-primary" target="_blank">View Project</a>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="project3" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Flight Delay Prediction Using Spark ML</h4>
-				</div>
-				<div class="modal-body">
-					<img src="assets/images/projects/p33.png" alt="Project Image" class="img-responsive">
-					<p>The project included extensive data collection (almost 5GB dataset) of USA Flights, EDA, preprocessing, feature engineering, and data ingestion pipeline using Kafka and Spark. The model predictions were evaluated using metrics like accuracy, with gradient boosted trees showing the highest performance.</p>
-					<p><strong>Skills Demonstrated:</strong> Machine Learning models, Data Mining, Data science Concepts, Big Data Technologies, Data Pipeline, Automation of the Data flow, and so on.</p>
-					<p><strong>Business Value:</strong> Helps airlines and airports optimize operations by predicting flight delays, enhancing customer satisfaction, and operational efficiency through timely and accurate predictions.</p>
-					<a href="https://github.com/ISM6562-Big-Data/TEAM-APOGEE/tree/main/Project" class="btn btn-primary" target="_blank">View Project</a>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-	<!-- Blog Section -->
-	<section id="blog" class="blog">
-		<div class="blog-details">
-			<div class="section-heading text-center">
-				<h2>Blog</h2>
-			</div>
-			<div class="container">
-				<div class="blog-content">
-					<div class="isotope">
-						<div class="row">
-
-							<!-- First Blog Post -->
-							<div class="col-sm-5">
-								<div class="item">
-									<img src="assets/images/blog/blog1.jpeg" alt="blog image" />
-									<div class="isotope-overlay">
-										<a href="#" onclick="openPopup(event, 'popupBlog1')">
-											The Impact of Algorithmic Bias on Data Analytics Careers and Organizations
-										</a>
-									</div><!-- /.isotope-overlay -->
-								</div><!-- /.item -->
-							</div><!-- /.col -->
-							<!-- First Blog Post Popup -->
-							<div id="popupBlog1" class="popup blog-popup">
-								<div class="popup-content blog-popup-content">
-									<span class="close" onclick="closePopup('popupBlog1')">&times;</span>
-									<h1>The Impact of Algorithmic Bias on Data Analytics Careers and Organizations</h1>
-
-									<br />
-
-									<p>Algorithmic bias in AI systems poses significant challenges and opportunities for the data analytics field. AI's promise of enhancing efficiency and decision-making is counterbalanced by the risk of existing inequalities through biased algorithms. This analysis delves into the effects of algorithmic bias on organizations and careers within the data analytics industry, providing insights into the future landscape shaped by this critical issue.</p>
-
-									<h4>Organizational Impact</h4>
-									<p>Businesses that depend on AI systems to help them solve their problems stand to have their reputations tarnished if the algorithms used are biased. For instance, Google suggesting black people as gorillas in search or Amazon discriminating against women in hiring could provoke public outrage. Organizations should ensure that their AI solutions are operated fairly to preserve stakeholders� confidence.</p>
-
-									<p>Due to concerns regarding algorithmic bias, regulatory bodies are scrutinizing AI systems more closely. Companies must prepare for stringent regulations requiring transparency, fairness audits, and accountability in AI deployment. Compliance with these regulations will promote a culture of ethical AI development.</p>
-
-									<p>Bias in AI can lead to inefficiencies and poor decision-making. For example, biased hiring algorithms can result in a less diverse workforce, limiting the range of perspectives and creativity within the organization. Similarly, biased loan approval systems can exclude qualified applicants, hindering business growth.</p>
-
-									<h4>Impact on Careers in Data Analytics</h4>
-									<p>New Skills: As the importance of mitigating bias in AI grows, data analysts and scientists must acquire new skills. Proficiency in ethical AI principles and the latest methodologies for ensuring fairness in AI systems, such as adversarial debiasing and fairness-aware machine learning, will be essential. Companies must invest in training programs that raise awareness about AI bias among HR professionals and decision-makers.</p>
-
-									<p>Interdisciplinary Collaboration: Addressing algorithmic bias requires collaboration between data scientists, ethicists, sociologists, and domain experts. Careers in data analytics will increasingly demand interdisciplinary knowledge and the ability to work effectively with diverse teams. This collaborative approach ensures AI systems are designed with a comprehensive understanding of their social and ethical implications.</p>
-
-									<p>New Career Roles: The growing focus on ethical AI presents new career opportunities within the data analytics field. Roles such as AI ethics officers, fairness auditors, and bias mitigation specialists are emerging, driving demand for professionals with expertise in these areas.</p>
-
-									<h4>The Future Landscape</h4>
-									<p>The future of data analytics will be profoundly influenced by how the industry addresses algorithmic bias. Data analytics professionals equipped with the skills to identify and mitigate bias will play a pivotal role in shaping this future, ensuring AI technologies contribute positively to society.</p>
-
-									<p>In conclusion, algorithmic bias presents challenges and opportunities for the data analytics industry. Prioritizing fairness, transparency, and interdisciplinary collaboration allows organizations and professionals to harness AI's full potential while mitigating biased algorithms' risks.</p>
-								</div>
-							</div><!-- /.col -->
-							<!-- Add more blog posts similarly if needed -->
-
-						</div><!-- /.row -->
-					</div><!--/.isotope-->
-				</div><!--/.blog-content-->
-			</div><!--/.container-->
-		</div><!--/.blog-details-->
-	</section><!--/.blog-->
-	<!-- Blog Section End -->
-	<!-- Add your existing JavaScript and CSS code -->
-	<!-- Blog Section Start -->
-	<!--<section id="blog" class="blog">
-		<div class="blog-details">
-			<div class="section-heading text-center">
-				<h2>Blog</h2>
-				<p>Latest insights and analyses</p>
-			</div>
-			<div class="container">
-				<div class="blog-content">
-					<div class="row">-->
-	<!-- Blog 1 -->
-	<!--<div class="col-sm-6 col-md-4">
-		<div class="blog-item">
-			<img src="assets/images/blog/blog1.jpeg" alt="blog image" class="img-fluid" />
-			<div class="blog-overlay">
-				<a href="#" data-toggle="modal" data-target="#blog1Modal">
-					The Impact of Algorithmic Bias on Data Analytics Careers and Organizations
-				</a>
-			</div>-->
-	<!-- /.blog-overlay -->
-	<!--</div>--><!-- /.blog-item -->
-	<!--</div>--><!-- /.col -->
-	<!--</div>--><!-- /.row -->
-	<!--</div>--><!-- /.blog-content -->
-	<!--</div>--><!-- /.container -->
-	<!--</div>--><!-- /.blog-details -->
-	<!--</section>--><!-- /.blog -->
-	<!-- Blog Section End -->
-	<!-- Blog 1 Modal -->
-	<!--<div class="modal fade" id="blog1Modal" tabindex="-1" role="dialog" aria-labelledby="blog1ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="blog1ModalLabel">The Impact of Algorithmic Bias on Data Analytics Careers and Organizations</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<h8> <b> The Impact of Algorithmic Bias on Data Analytics Careers and Organizations</b> </h8>
-					<p>Algorithmic bias in AI systems poses significant challenges and opportunities for the data analytics field. AI's promise of enhancing efficiency and decision-making is counterbalanced by the risk of existing inequalities through biased algorithms. This analysis delves into the effects of algorithmic bias on organizations and careers within the data analytics industry, providing insights into the future landscape shaped by this critical issue.</p>
-
-					<h4>Organizational Impact </h4>
-					<p>
-						Businesses that depend on AI systems to help them solve their problems stand to have their reputations tarnished if the algorithms used are biased. For instance, Google suggesting black people as gorillas in search or Amazon discriminating against women in hiring could provoke public outrage. Organizations should ensure that their AI solutions are operated fairly to preserve stakeholders� confidence.
-					</p>
-					<p>Due to concerns regarding algorithmic bias, regulatory bodies are scrutinizing AI systems more closely. Companies must prepare for stringent regulations requiring transparency, fairness audits, and accountability in AI deployment. Compliance with these regulations will promote a culture of ethical AI development.</p>
-					<p>Bias in AI can lead to inefficiencies and poor decision-making. For example, biased hiring algorithms can result in a less diverse workforce, limiting the range of perspectives and creativity within the organization. Similarly, biased loan approval systems can exclude qualified applicants, hindering business growth.</p>
-
-					<h4>Impact on Careers in Data Analytics</h4>
-					<p>
-						New Skills: As the importance of mitigating bias in AI grows, data analysts and scientists must acquire new skills. Proficiency in ethical AI principles and the latest methodologies for ensuring fairness in AI systems, such as adversarial debiasing and fairness-aware machine learning, will be essential. Companies must invest in training programs that raise awareness about AI bias among HR professionals and decision-makers.
-					</p>
-					<p>Interdisciplinary Collaboration: Addressing algorithmic bias requires collaboration between data scientists, ethicists, sociologists, and domain experts. Careers in data analytics will increasingly demand interdisciplinary knowledge and the ability to work effectively with diverse teams. This collaborative approach ensures AI systems are designed with a comprehensive understanding of their social and ethical implications.</p>
-					<p>New Career Roles: The growing focus on ethical AI presents new career opportunities within the data analytics field. Roles such as AI ethics officers, fairness auditors, and bias mitigation specialists are emerging, driving demand for professionals with expertise in these areas.</p>
-
-					<h4>The Future Landscape</h4>
-					<p>
-						The future of data analytics will be profoundly influenced by how the industry addresses algorithmic bias. Data analytics professionals equipped with the skills to identify and mitigate bias will play a pivotal role in shaping this future, ensuring AI technologies contribute positively to society.
-					</p>
-					<p>In conclusion, algorithmic bias presents challenges and opportunities for the data analytics industry. Prioritizing fairness, transparency, and interdisciplinary collaboration allows organizations and professionals to harness AI's full potential while mitigating biased algorithms' risks.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>-->
-	<!-- Blog 1 Modal End -->
-	<!-- Include Bootstrap JS and dependencies -->
-	<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
-
-
-	<script>
-		// Open the popup
-		function openPopup(event, popupId) {
-			event.preventDefault();
-			document.getElementById(popupId).style.display = "block";
-		}
-
-		// Close the popup
-		function closePopup(popupId) {
-			document.getElementById(popupId).style.display = "none";
-		}
-
-		// Close the popup if the user clicks outside of the popup content
-		window.onclick = function (event) {
-			var popups = document.getElementsByClassName("popup");
-			for (var i = 0; i < popups.length; i++) {
-				if (event.target == popups[i]) {
-					popups[i].style.display = "none";
-				}
-			}
-		}
-
-	</script>
-
-	<!--contact start -->
-	<section id="contact" class="contact">
-		<div class="section-heading text-center">
-			<h2>contact me</h2>
-		</div>
-		<div class="container">
-			<div class="contact-content">
-				<div class="row">
-					<div class="col-md-offset-1 col-md-5 col-sm-6">
-						<div class="single-contact-box">
-							<div class="contact-form">
-								<form>
-									<div class="row">
-										<div class="col-sm-6 col-xs-12">
-											<div class="form-group">
-												<input type="text" class="form-control" id="name" placeholder="Name*" name="name">
-											</div><!--/.form-group-->
-										</div><!--/.col-->
-										<div class="col-sm-6 col-xs-12">
-											<div class="form-group">
-												<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
-											</div><!--/.form-group-->
-										</div><!--/.col-->
-									</div><!--/.row-->
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="form-group">
-												<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-											</div><!--/.form-group-->
-										</div><!--/.col-->
-									</div><!--/.row-->
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="form-group">
-												<textarea class="form-control" rows="8" id="comment" placeholder="Message"></textarea>
-											</div><!--/.form-group-->
-										</div><!--/.col-->
-									</div><!--/.row-->
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="single-contact-btn">
-												<a class="contact-btn" href="#" role="button">submit</a>
-											</div><!--/.single-single-contact-btn-->
-										</div><!--/.col-->
-									</div><!--/.row-->
-								</form><!--/form-->
-							</div><!--/.contact-form-->
-						</div><!--/.single-contact-box-->
-					</div><!--/.col-->
-					<div class="col-md-offset-1 col-md-5 col-sm-6">
-						<div class="single-contact-box">
-							<div class="contact-adress">
-								<div class="contact-add-head">
-									<h3>Payal Samanta</h3>
-									<p>Data Analyst</p>
-								</div>
-								<div class="contact-add-info">
-									<div class="single-contact-add-info">
-										<h3>phone</h3>
-										<p>656-216-7950</p>
-									</div>
-									<div class="single-contact-add-info">
-										<h3>email</h3>
-										<p>payalsamanta02@gmail.com</p>
-									</div>
-
-								</div>
-							</div><!--/.contact-adress-->
-							<div class="hm-foot-icon">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li><!--/li-->
-									<li><a href="#"><i class="fa fa-dribbble"></i></a></li><!--/li-->
-
-									<li><a href="#"><i class="fa fa-linkedin"></i></a></li><!--/li-->
-									<li><a href="#"><i class="fa fa-instagram"></i></a></li><!--/li-->
-								</ul><!--/ul-->
-							</div><!--/.hm-foot-icon-->
-						</div><!--/.single-contact-box-->
-					</div><!--/.col-->
-				</div><!--/.row-->
-			</div><!--/.contact-content-->
-		</div><!--/.container-->
-
-	</section><!--/.contact-->
-	<!--contact end -->
-	<!--footer-copyright start-->
-	<footer id="footer-copyright" class="footer-copyright">
-		<div class="container">
-			<div class="hm-footer-copyright text-center">
-
-			</div><!--/.text-center-->
-		</div><!--/.container-->
-
-		<div id="scroll-Top">
-			<div class="return-to-top">
-				<i class="fa fa-angle-up " id="scroll-top"></i>
-			</div>
-
-		</div><!--/.scroll-Top-->
-
-	</footer><!--/.footer-copyright-->
-	<!--footer-copyright end-->
-	<!-- Include all js compiled plugins (below), or include individual files as needed -->
-
-	<script src="assets/js/jquery.js"></script>
-
-	<!--modernizr.min.js-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-	<!--bootstrap.min.js-->
-	<script src="assets/js/bootstrap.min.js"></script>
-
-	<!-- bootsnav js -->
-	<script src="assets/js/bootsnav.js"></script>
-
-	<!-- jquery.sticky.js -->
-	<script src="assets/js/jquery.sticky.js"></script>
-
-	<!-- for progress bar start-->
-	<!-- progressbar js -->
-	<script src="assets/js/progressbar.js"></script>
-
-	<!-- appear js -->
-	<script src="assets/js/jquery.appear.js"></script>
-
-	<!-- for progress bar end -->
-	<!--owl.carousel.js-->
-	<script src="assets/js/owl.carousel.min.js"></script>
-
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-
-	<!--Custom JS-->
-	<script src="assets/js/custom.js"></script>
+</section><!--/.experience-->
+<!--experience end -->
 
 
 
 
 
 
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<!-- Bootstrap JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--====================== projects list ============== -->
+<section class="projects-section pt-5" id="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center animate__animated animate__zoomInUp">
+                <h1 class="hero-head">Projects</h1>
+                <p class="font-weight-bold">A showcase of my key projects</p>
+                <div class="heading-line"></div>
+            </div>
+        </div>
+        <div class="row mt-5 animate__animated animate__zoomInUp">
+            <!-- Project 1 -->
+            <div class="col-12 mb-4">
+                <div class="project-item p-4 border rounded">
+                    <h3>AWS Redshift ETL Project (Advanced Database Management)</h3>
+                    <p>Overview: In this project, I led the end-to-end analysis of an Adidas sales dataset(from Kaggle) using AWS Redshift, orchestrating a seamless data upload to AWS S3. The project focused on executing efficient ETL Pipeline Automation and using the Redshift inbuilt dashboard for visualization. Additionally, developed a ML model using Amazon SageMaker.</p>
+                    <p>Key steps: The project focused on executing efficient ETL process and using the Redshift inbuilt dashboard for visualization. Additionally, developed a ML model using Amazon SageMaker. Advanced database management, cloud-based ETL processes, data analysis, to handle large datasets, and perform complex data transformations.</p>
+                    <p>Skills Demonstrated: Advanced Database Management,Automation of ETL pipeline on AWS Platform, Redshift </p>
+                    <p>Business Value: Enables businesses to derive actionable insights from large datasets quickly and efficiently, improving decision-making and operational efficiency through real-time data analysis and machine learning models. As we can see in the visualization below i.e statewise online sales distribution in northeast region</p>
+
+                    <a href="https://github.com/payalsamanta02/AWS-Redshift-ETL-Final-Project-" class="btn btn-warning text-white mt-2">View Project</a>
+                    <div class="code-snippet mt-3">
+                        <h4>Code Snippet</h4>
+                        <img src="assets/images/path_to_your_image_1.png" alt="AWS Redshift ETL Project Code Snippet" class="img-fluid border rounded">
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-12 mb-4">
+                <div class="project-item p-4 border rounded">
+                    <h3>Flight Delay Prediction Using Spark ML</h3>
+                    <p>Overview: The project included extensive data collection (almost 5GB dataset) of USA Flights, EDA, preprocessing, feature engineering, and data ingestion pipeline using Kafka and Spark. The model predictions were evaluated using metrics like accuracy, with gradient boosted trees showing the highest performance.</p>
+                    <p>This project highlights my expertise in big data technologies, particularly Spark ML and Kafka, and my ability to manage, store and process large datasets. Data visualization was done through Spark SQL.</p>
+                    <p>Skills Demonstrated: Machine Learning models, Data Mining, Data science Concepts, Big Data Technologies, Data Pipeline, Automation the Data flow and so on.</p>
+                    <p>Business Value: Helps airlines and airports optimize operations by predicting flight delays, enhancing customer satisfaction and operational efficiency through timely and accurate predictions.</p>
+                    <a href="https://github.com/ISM6562-Big-Data/TEAM-APOGEE/tree/main/Project" class="btn btn-warning text-white mt-2">View Project</a>
+                    <div class="code-snippet mt-3">
+                       
+                        <h4>Data Flow</h4>
+                         <img src="assets/images/path_to_your_image_5.png" alt="Flight Delay Prediction Code Snippet" class="img-fluid border rounded">
+                         <h4>Code Snippet- Average Departure Delay by Carrier</h4>
+                         <img src="assets/images/path_to_your_image_2.png" alt="Flight Delay Prediction Code Snippet" class="img-fluid border rounded">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-12 mb-4">
+                <div class="project-item p-4 border rounded">
+                    <h3>Azure End-To-End Project on Olympics Data Analytics</h3>
+                    <p>Overview: This project focuses on analyzing an Olympic dataset using various tools and technologies available on the Azure platform. It demonstrates visualization skills through data integration using Azure Data Factory, transforming data with Azure Databricks, and most importantly, reporting with Power BI.</p>
+                    <p>Key steps: Shown in the Data flow diagram</p>
+                    <p>Skills Demonstrated: Large-scale data processing, ETL processes, feature engineering, SQL querying, data visualization, and reporting. </p>
+                    <p>Business Value: This project provides comprehensive insights into sports data, aiding stakeholders in making data-driven decisions, improving coache's performance analysis, and enhancing the overall viewing experience for end users through detailed visualizations and reports.</p>
+                    <a href="https://github.com/payalsamanta02/Azure-Data-Engineering-Project" class="btn btn-warning text-white mt-2">View Project</a>
+                    <div class="code-snippet mt-3">
+                        <h4>Data Flow</h4>
+                        <img src="assets/images/path_to_your_image_3.png" alt="Azure Olympics Data Analytics Code Snippet" class="img-fluid border rounded">
+                        <h4>Power BI Dashboard- Coaches Performance Analysis</h4>
+                        <img src="assets/images/path_to_your_image_4.png" alt="Azure Olympics Data Analytics Code Snippet" class="img-fluid border rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        
+       <!--====================== projects list end ============== -->
+
+        <!--====================== blog article ============== -->
+<section class="blog-section bg-white" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mt-5 mb-5">
+                <h1 class="hero-head">Blog</h1>
+                <p class="font-weight-bold">Latest insights and analyses</p>
+                <div class="heading-line"></div>
+            </div>
+            <div class="col-12 animate__animated animate__zoomIn">
+                <article class="blog-post p-4">
+                    <h2>The Impact of Algorithmic Bias on Data Analytics Careers and Organizations</h2>
+                    
+                    <p>Algorithmic bias in AI systems poses significant challenges and opportunities for the data analytics field. AI's promise of enhancing efficiency and decision-making is counterbalanced by the risk of existing inequalities through biased algorithms. This analysis delves into the effects of algorithmic bias on organizations and careers within the data analytics industry, providing insights into the future landscape shaped by this critical issue.</p>
+                    
+                    <p><strong>Organizational Impact</strong></p>
+                    <ul>
+                        <li>Businesses that depend on AI systems to help them solve their problems stand to have their reputations tarnished if the algorithms used are biased. For instance, Google suggesting black people as gorillas in search or Amazon discriminating against women in hiring could provoke public outrage. Organizations should ensure that their AI solutions are operated fairly to preserve stakeholders� confidence.</li>
+                        <li>Due to concerns regarding algorithmic bias, regulatory bodies are scrutinizing AI systems more closely. Companies must prepare for stringent regulations requiring transparency, fairness audits, and accountability in AI deployment. Compliance with these regulations will promote a culture of ethical AI development.</li>
+                        <li>Bias in AI can lead to inefficiencies and poor decision-making. For example, biased hiring algorithms can result in a less diverse workforce, limiting the range of perspectives and creativity within the organization. Similarly, biased loan approval systems can exclude qualified applicants, hindering business growth.</li>
+                    </ul>
+                    
+                    <p><strong>Impact on Careers in Data Analytics</strong></p>
+                    <ul>
+                        <li><strong>New Skills:</strong> As the importance of mitigating bias in AI grows, data analysts and scientists must acquire new skills. Proficiency in ethical AI principles and the latest methodologies for ensuring fairness in AI systems, such as adversarial debiasing and fairness-aware machine learning, will be essential. Companies must invest in training programs that raise awareness about AI bias among HR professionals and decision-makers.</li>
+                        <li><strong>Interdisciplinary Collaboration:</strong> Addressing algorithmic bias requires collaboration between data scientists, ethicists, sociologists, and domain experts. Careers in data analytics will increasingly demand interdisciplinary knowledge and the ability to work effectively with diverse teams. This collaborative approach ensures AI systems are designed with a comprehensive understanding of their social and ethical implications.</li>
+                        <li><strong>New Career Roles:</strong> The growing focus on ethical AI presents new career opportunities within the data analytics field. Roles such as AI ethics officers, fairness auditors, and bias mitigation specialists are emerging, driving demand for professionals with expertise in these areas.</li>
+                    </ul>
+                    
+                    <p><strong>The Future Landscape</strong></p>
+                    <p>The future of data analytics will be profoundly influenced by how the industry addresses algorithmic bias. Data analytics professionals equipped with the skills to identify and mitigate bias will play a pivotal role in shaping this future, ensuring AI technologies contribute positively to society.</p>
+                    
+                    <p>In conclusion, algorithmic bias presents challenges and opportunities for the data analytics industry. Prioritizing fairness, transparency, and interdisciplinary collaboration allows organizations and professionals to harness AI's full potential while mitigating biased algorithms' risks.</p>
+                
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!--====================== blog article end ============== -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-text text-center mt-5">
+                            <h1>Contact Form</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-12 animate__animated animate__zoomIn">
+                        <form action="#" class="contact-form scroll-bottom">
+                            <input type="text" placeholder="Your Name">
+                            <input type="text" placeholder="Your Email">
+                            <input type="text" placeholder="Your Address">
+                            <input type="number" placeholder="Phone Number">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Type Here Message"></textarea>
+                            <input type="submit" class="text-uppercase btn-warning text-white" value="Send">
+                        </form>
+                    </div>
+                    <div class="col-lg-4 col-12 animate__animated animate__zoomIn contact-details">
+                        <p><strong>Name:</strong> Payal Samanta</p>
+                        <p><strong>Contact Number:</strong> +16562167950</p>
+                        <p><strong>Email:</strong> payalsamanta@usf.edu.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====================== footer ============== -->
+        
+    </main>
+    <!--====================== footer end ============== -->
+    <!-- ============ Bootstrap ============== -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
